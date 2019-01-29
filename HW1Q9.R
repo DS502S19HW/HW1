@@ -18,8 +18,8 @@ temp = lm(mpg ~ horsepower, data = auto);
 summary(temp);
 # Comment: TODO
 # i Yes
-# ii Weak R^2 = 0.2
-# iii Positive
+# ii Strong R^2 = 0.6
+# iii Negative
 # iv Predict mpg associated with a horsepower of 98
 predict(temp, data.frame(horsepower = 98), interval = "confidence");
 predict(temp, data.frame(horsepower = 98), interval = "prediction");
