@@ -2,8 +2,8 @@
 # Created on Jan 28th 2019
 # Edited on Jan 29th 2019
 #
-# R script for Homework 1 Question 4(Section 2.4, page 54-55, question 8)
-# The college.csv file should be in working direction 
+# R script for Homework 1 Question 5(Section 2.4, page 56, question 9)
+# The Auto.csv file should be in working direction 
 setwd('Z:/R_working_directory/DS502HW1');
 
 # Read the file
