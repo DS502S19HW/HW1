@@ -1,5 +1,6 @@
 # Author: Tianyu Li
 # Created on Jan 21st 2019
+# Edited on Jan 28th 2019
 #
 # R script for Homework 1 Question 4(Section 2.4, page 54-55, question 8)
 # The college.csv file should be in working direction 
