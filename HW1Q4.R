@@ -48,5 +48,10 @@ hist(100 * college$Accept / college$Apps, breaks = 20, xlim = range(0, 100),
 hist(100 * college$Enroll / college$Accept, breaks = 20, xlim = range(0, 100),
      main = "Enroll Rate", xlab = "Enroll rate in %");
 
-#(c) vi. TODO
-
+#(c) vi.Continue exploring
+summary(lm(Grad.Rate ~ . , data = college));
+# We chose graduate rate as the dependent variable and tried to fit in a linear model of other columns.
+# We found that the Number of part-time student is negatively correlated to the graduate rate significantly and 
+# the outstate tuition and percent of alumni who donate are postively correlated to the graduate rate significantly.
+# Besides, the number of applicants, room and board costs and instructional expenditure per student are
+# also correlated to the graduate rate.

@@ -16,10 +16,9 @@ auto$horsepower = as.numeric(as.character(auto$horsepower));
 #(a) Perform a simple linear regression
 temp = lm(mpg ~ horsepower, data = auto);
 summary(temp);
-# Comment: TODO
 # i Yes
-# ii Strong R^2 = 0.6
-# iii Negative
+# ii The relationship is strong as the value of R^2 is 0.6059
+# iii Negative, the coefficient is -0.157845.
 # iv Predict mpg associated with a horsepower of 98
 predict(temp, data.frame(horsepower = 98), interval = "confidence");
 predict(temp, data.frame(horsepower = 98), interval = "prediction");
@@ -32,4 +31,4 @@ abline(temp, col = 'red');
 #(c) Produce diagnostic plots of the least squares regression fit
 par(mfrow = c(2, 2))
 plot(temp);
-# Comment: TODO
+# Comment: The plots (the first and third one) show that the relationship is non-linear. 

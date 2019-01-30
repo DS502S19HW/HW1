@@ -12,7 +12,7 @@ auto = read.csv(file = 'Auto.csv', header = TRUE);
 # Remove missing values
 auto[auto == '?'] <- NA;
 auto = na.omit(auto);
-auto$horsepower = as.numeric(auto$horsepower);
+auto$horsepower = as.numeric(as.character(auto$horsepower));
 
 #(a) The last 2 predictors are qualitative, the others are quantative.
 #    The "origin" should stands for the continent so it is qualitative.
@@ -31,8 +31,14 @@ sapply(subAuto[, 1:7], mean);
 sapply(subAuto[, 1:7], sd);
 
 #(e) Create some plots
-# TODO
+pairs(auto[, 1:7]);
+# We found that the displacement and weight look postively correlated to the horsepower.
 
 #(f) Predictors that might be useful in predicting mpg
-pairs(auto[, 1:7]);
-boxplot(auto$mpg ~ auto$origin);
+# From the figures of last question, we found that mpg is postively correlated to year and
+# negatively correlated to displacement, horsepower and weight. 
+boxplot(auto$mpg ~ auto$origin, names = c("America", "Europe", "Japan"), ylab = "mpg", 
+        main = "Mpg over Origin");
+# We also found that for the origin column, 1 should stands for America, 2 stands for Europe
+# and 3 stands for Asia. In general, asian cars is highest on mpg while american cars is lowest.
+
