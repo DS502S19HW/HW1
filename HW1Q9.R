@@ -31,4 +31,4 @@ abline(temp, col = 'red');
 #(c) Produce diagnostic plots of the least squares regression fit
 par(mfrow = c(2, 2))
 plot(temp);
-# Comment: The plots (the first and third one) show that the relationship is non-linear. 
+# The plots (the first and third one) show that the relationship is non-linear. 
